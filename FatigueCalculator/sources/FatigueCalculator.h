@@ -10,7 +10,7 @@ class FatigueCalculator {
     FatigueCalculator();
     ~FatigueCalculator();
 
-    long calculateFatigue(int time, std::vector<int> *workArray);
-    void swap(int idx1, int idx2);
-    void pushToBack(int idx);
+    long calculateFatigue(int time, std::vector<int> *workArray);	// Calculate minimum fatigue
+    void swap(int idx1, int idx2);									// Swap two values in vector
+    void pushToBack(int idx);										// Re-sort to descending order
 };

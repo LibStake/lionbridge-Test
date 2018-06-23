@@ -30,9 +30,9 @@ long FatigueCalculator::calculateFatigue(int time, std::vector<int> *workArray) 
 	int firstElem = 0;
 	while (remTime != 0 && firstElem < (int)(works->size())) {
 		works->at(firstElem)--;
-		remTime--;
-		if (works->at(firstElem) == 0) firstElem++;
-		else pushToBack(firstElem);
+		remTime--;										// Now we have worked an hour
+		if (works->at(firstElem) == 0) firstElem++;		// Exclude '0' value
+		else pushToBack(firstElem);						// Re-arrange descend sort order
 	}
 
 	// Sum result
